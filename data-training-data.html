@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Training | The Data</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      font-size: 15px;
+    }
+
+    .topnav {
+      background: #111;
+      color: white;
+      padding: 12px 20px;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .topnav a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 270px;
+      background: #f4f4f4;
+      border-right: 1px solid #e2e2e2;
+      padding: 24px 20px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .sidebar a {
+      display: block;
+      font-size: 14px;
+      color: #222;
+      text-decoration: none;
+      padding: 6px 0;
+      line-height: 1.4;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      flex: 1;
+      padding: 36px 40px;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 14px;
+      white-space: pre-line;
+    }
+
+    ul, ol {
+      line-height: 1.7;
+      margin-top: 0;
+      margin-bottom: 14px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    pre {
+      background: #f7f7f7;
+      border: 1px solid #e2e2e2;
+      border-radius: 6px;
+      padding: 14px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0 20px 0;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    th {
+      background: #f0f0f0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 28px 0;
+    }
+
+    .box {
+      background: #f7f7f7;
+      border-left: 4px solid #999;
+      padding: 14px;
+      margin: 20px 0;
+      border-radius: 6px;
+      white-space: pre-line;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 850px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="data-training-welcome.html">Data Training</a>
+</div>
+
+<div class="layout">
+<aside class="sidebar">
+  <h2>Data Training</h2>
+
+  <a href="data-training-welcome.html">Welcome</a>
+  <a href="data-training-open-science.html">About Open Science</a>
+  <a href="data-training-good-data.html">What Good Data Looks Like</a>
+
+<a href="data-training-data.html" class="active">The Data</a>
+  <a href="data-training-metadata.html">Metadata</a>
+  <a href="data-training-readme.html">README</a>
+  <a href="data-training-license.html">License</a>
+  <a href="data-training-repository.html">Repository</a>
+
+  <a href="data-training-curation.html">Curation & Training</a>
+</aside>
+
+
+  <main class="content">
+
+
+    <h1 id="data">The Data</h1>
+
+    <p><strong>Example</strong></p>
+
+    <strong>Bad</strong>
+
+    <div class="box">
+ data_final.xlsx
+T1   T2   T3
+    </div>
+      
+<p>No one knows what this means.</p>
+
+    <strong>Good</strong>
+       <div class="box">
+20231210_temperature.csv
+time_min, temperature_C
+0, 22.1
+10, 23.5
+   </div>
+    <p>
+      Then, add a short explanation into the README.txt : </p>
+      <div class="box">
+        README.txt 
+This dataset contains temperature measurements collected in the Loire Estuary using a temperature sensor. 
+        Measurements were recorded every 10 minutes in degrees Celsius (°C).
+</div>
+    <p> Now anyone can use it. </p>
+      
+    <p><strong>If you have many files</strong>
+Example of how to structure the folder:</p>
+
+    <pre>Loire_Estuary/
+│
+├── Field_data/
+├── Code/
+└── Notes/</pre>
+
+    <p>Keep it simple, but do not mix everything in one place.</p>
+
+    <h2 id="file-name">File name</h2>
+
+    <p>A meaningful file naming is really helpful to make others follow your process and your work. Example of a good practice of naming files are:
+ 
+    <ol>
+      <li>A maximum of 25 characters should be used for file names.</li>
+      <li>Accents, symbols, special characters, and spaces are to be excluded.</li>
+      <li>The file name is separated by underscore “_” and not space “ ”.</li>
+      <li>The structure is to follow a logical order:</li>
+    </ol>
+
+    <ul>
+      <li>Creation date: formatted as YYYYMMDD.</li>
+      <li>Content description.</li>
+      <li>Version.</li>
+      <li>Name or initials of creator.</li>
+      <li>Project number, name, or code.</li>
+      <li>Avoid terms such as "draft" or "final".</li>
+    </ul>
+</p>
+    <p>Example:
+20261210_DMP_v7_lp.pdf
+Underscores are more interoperable. They are easier for machines to read and process, while spaces often create errors.</p>
+
+    <h2 id="format">Format</h2>
+
+    <p>Here is a list of some open formats:</p>
+
+    <table>
+      <tr>
+        <th>If you have…</th>
+        <th>Use this (recommended)</th>
+        <th>Avoid when possible</th>
+      </tr>
+      <tr>
+        <td>Tables / data</td>
+        <td>.csv, .tsv</td>
+        <td>.xlsx only</td>
+      </tr>
+      <tr>
+        <td>Text / notes</td>
+        <td>.txt, .md, .xml</td>
+        <td>.docx only</td>
+      </tr>
+      <tr>
+        <td>Documents</td>
+        <td>.pdf, .odt</td>
+        <td>locked formats</td>
+      </tr>
+      <tr>
+        <td>Images</td>
+        <td>.png, .tif, .jpg</td>
+        <td>proprietary formats</td>
+      </tr>
+      <tr>
+        <td>Data (structured)</td>
+        <td>.json, .xml</td>
+        <td>unclear formats</td>
+      </tr>
+      <tr>
+        <td>Geospatial</td>
+        <td>.geojson, .kml, .shp</td>
+        <td>software-specific only</td>
+      </tr>
+      <tr>
+        <td>Audio</td>
+        <td>.wav, .mp3, .flac</td>
+        <td>proprietary formats</td>
+      </tr>
+      <tr>
+        <td>Video</td>
+        <td>.mp4, .webm</td>
+        <td>uncommon codecs</td>
+      </tr>
+      <tr>
+        <td>Archives</td>
+        <td>.zip, .tar.gz</td>
+        <td>unclear compression</td>
+      </tr>
+    </table>
+
+    <h2 id="geospatial">Geospatial Data</h2>
+
+    <table>
+      <tr>
+        <th>If you have…</th>
+        <th>Use this (recommended)</th>
+        <th>Avoid when possible</th>
+      </tr>
+      <tr>
+        <td>Vector data</td>
+        <td>.geojson, .shp, .gpkg</td>
+        <td>proprietary-only formats</td>
+      </tr>
+      <tr>
+        <td>Raster data</td>
+        <td>.tif (GeoTIFF)</td>
+        <td>unclear or compressed only</td>
+      </tr>
+      <tr>
+        <td>Maps (web)</td>
+        <td>.geojson, .kml</td>
+        <td>platform-locked formats</td>
+      </tr>
+      <tr>
+        <td>Coordinates data</td>
+        <td>.csv (with lat/long)</td>
+        <td>missing coordinate system</td>
+      </tr>
+    </table>
+
+    <p><strong>What good geospatial data looks like: </strong></p>
+
+    <ul>
+      <li>coordinates are included (lat/long or projection)</li>
+      <li>coordinate system is specified (e.g. WGS84 / EPSG:4326)</li>
+      <li>file can be opened in common tools (QGIS, Python, R)</li>
+      <li>variables are clearly named</li>
+      <li>metadata explain how data were collected</li>
+    </ul>
+
+
+    <h2 id="code">Code</h2>
+
+    <p>Here is example of recommended formats for code.</p>
+
+    <table>
+      <tr>
+        <th>If you have…</th>
+        <th>Use this</th>
+        <th>Avoid</th>
+      </tr>
+      <tr>
+        <td>Scripts</td>
+        <td>.py, .R, .m, .sh</td>
+        <td>compiled only files</td>
+      </tr>
+      <tr>
+        <td>Notebooks</td>
+        <td>.ipynb</td>
+        <td>no explanation</td>
+      </tr>
+      <tr>
+        <td>Documentation</td>
+        <td>.md, .txt</td>
+        <td>no README</td>
+      </tr>
+      <tr>
+        <td>Environment</td>
+        <td>requirements.txt, .yml</td>
+        <td>not specified</td>
+      </tr>
+      <tr>
+        <td>Version control</td>
+        <td>Git (GitHub, GitLab)</td>
+        <td>local only</td>
+      </tr>
+      <tr>
+        <td>Archive</td>
+        <td>.zip, .tar.gz</td>
+        <td>scattered files</td>
+      </tr>
+    </table>
+
+    <p><strong>What good code looks like:</strong></p>
+
+    <ul>
+      <li>the code runs</li>
+      <li>the steps are clear</li>
+      <li>there are comments</li>
+      <li>dependencies are listed</li>
+      <li>someone else can execute it</li>
+    </ul>
+
+    <p>Minimal example</p>
+
+    <pre>project/
+├── data/
+├── code/
+│   ├── analysis.py
+│   └── README.md
+└── results/</pre>
+
+  
+    <p>   Add a note inside README.txt: </p>
+   <div class="box"> 
+    Run analysis.py using Python 3.10
+    Install dependencies from requirements.txt </div>
+    
+      <div class="box">     
+Remember:
+If someone cannot run your code and obtain the same result, it is not ready to share.</div>
+
+
+
+ 
+  </main>
+
+</div>
+
+</body>
+</html>
+```

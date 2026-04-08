@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Training | About Open Science</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #fafafa;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      font-size: 15px;
+    }
+
+    .topnav {
+      background: #111;
+      color: white;
+      padding: 12px 20px;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .topnav a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 270px;
+      background: #f4f4f4;
+      border-right: 1px solid #e2e2e2;
+      padding: 24px 20px;
+      box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .sidebar a {
+      display: block;
+      font-size: 14px;
+      color: #222;
+      text-decoration: none;
+      padding: 6px 0;
+      line-height: 1.4;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .sidebar a.active {
+      font-weight: bold;
+    }
+
+    .sidebar .sub {
+      padding-left: 14px;
+      font-size: 13px;
+    }
+
+    .content {
+      flex: 1;
+      padding: 36px 40px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 14px;
+      white-space: pre-line;
+    }
+
+    .box {
+      background: #f7f7f7;
+      border-left: 4px solid #999;
+      padding: 14px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .resource-link {
+      display: inline-block;
+      margin: 6px 0 12px 0;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .resource-link:hover {
+      text-decoration: underline;
+    }
+
+    .references p {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 850px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="data-training-welcome.html">Data Training</a>
+</div>
+
+<div class="layout">
+
+<aside class="sidebar">
+  <h2>Data Training</h2>
+
+  <a href="data-training-welcome.html">Welcome</a>
+  <a href="data-training-open-science.html">About Open Science</a>
+  <a href="data-training-good-data.html">What Good Data Looks Like</a>
+
+  <a href="data-training-data.html">The Data</a>
+  <a href="data-training-metadata.html">Metadata</a>
+  <a href="data-training-readme.html">README</a>
+  <a href="data-training-license.html">License</a>
+  <a href="data-training-repository.html">Repository</a>
+
+  <a href="data-training-curation.html">Curation & Training</a>
+
+</aside>
+
+  <main class="content">
+    <h1>About Open Science</h1>
+
+    <h2>Science does not end with publication</h2>
+    <p>Science has always depended on what could be carried forward.
+Today, we produce more data, more code, and more results than at any point in history. Yet much of it cannot be accessed, understood, or reused. It remains stored, but not transmitted. Preserved, but rarely usable. Studies estimate that a large proportion of research data are never shared or are lost over time, with some analyses suggesting that up to 80% of data become unavailable within two decades [1]. At the same time, concerns about reproducibility persist across disciplines, with surveys indicating that more than 70% of researchers have failed to reproduce another scientist’s experiments, and over half have failed to reproduce their own [2].
+</p>
+
+    <div class="box">
+      The problem is not always the absence of knowledge. It is the failure to make it continue.
+    </div>
+
+    <h2>What openness really means</h2>
+    <p>Open science is often reduced to access. But access alone is insufficient.
+As articulated in The Turing Way, openness is inseparable from transparency and reproducibility, emphasizing that research must be understandable and repeatable in order to be useful [3]. The materials developed through FOSTER Open Science Training Toolkit further stress that what matters is not simply whether research is visible, but whether it can be understood and reused within and across disciplines [4].
+</p>
+
+    <a class="resource-link" href="https://book.the-turing-way.org/" target="_blank">Learn more about The Turing Way</a>
+    
+    <a class="resource-link" href="https://github.com/Open-Science-Training-Handbook/Open-Science-Training-Handbook_EN/blob/master/02OpenScienceBasics/01OpenConceptsAndPrinciples.md" target="_blank">Learn more about FOSTER Open Science Handbook </a>
+
+    <h2>What it means to make knowledge usable: The FAIR Principles</h2>
+    <p>Published data should be findable, accessible, interoperable, and reusable [5]. These principles shift the focus from visibility to functionality. Data are not considered valuable simply because they exist or are available, but because they can be meaningfully used by others, including those outside the original research context. </p>
+<p> - Findability means that data can be located through persistent identifiers and metadata. </p>
+     <p> - Accessibility means that data can be retrieved under clear conditions. </p>
+    <p> - Interoperability allows data to be integrated with other datasets and systems. </p>
+    <p> - Reusability requires sufficient documentation and context so that data can be understood and applied beyond their original purpose.</p>
+<p>What is critical is that FAIR does not require all data to be openly available. It requires that data be as open as possible and as closed as necessary, while remaining usable under defined conditions [5].
+In this sense, FAIR operationalizes a fundamental principle of science. Knowledge must not only be preserved. It must remain interpretable, verifiable, and extendable.
+Without these conditions, data may exist, but they do not contribute to cumulative knowledge.</p>
+
+ <div class="box">
+  Research data should be as open as possible, and as closed as necessary. 
+   This means that data are made openly available whenever feasible, while respecting ethical, legal, and privacy constraints when restrictions are required.
+</div>
+
+    <h2>Responsibility, not additional work</h2>
+    <p>Open science is often perceived as an added burden. In practice, it is part of doing science.
+To contribute to knowledge is to assume responsibility for its transmission.
+This responsibility is not abstract. Knowledge can only be transmitted if it remains interpretable, accessible, and reusable. Data that are undocumented, inaccessible, or irreproducible break this chain. In such cases, knowledge is not immediately lost, but it becomes unusable, and therefore cannot be built upon.
+Preservation alone is not sufficient. What must be preserved is the ability to understand, verify, and extend what was produced.</p>
+
+    <h2>References</h2>
+    <div class="references">
+      <p>[1] Vines, T. H., et al. (2014). The availability of research data declines rapidly with article age. Current Biology.</p>
+      <p>[2] Baker, M. (2016). 1,500 scientists lift the lid on reproducibility. Nature.</p>
+      <p>[3] The Turing Way. Guide for reproducible, ethical, and collaborative research.</p>
+      <p>[4] FOSTER Open Science Training Toolkit. Open Science training materials.</p>
+      <p>[5] Wilkinson, M. D., et al. (2016). The FAIR Guiding Principles for scientific data management and stewardship. Scientific Data.</p>
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>

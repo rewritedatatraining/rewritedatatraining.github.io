@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Training | General Data</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      font-size: 15px;
+    }
+
+    .topnav {
+      background: #111;
+      color: white;
+      padding: 12px 20px;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .topnav a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 270px;
+      background: #f4f4f4;
+      border-right: 1px solid #e2e2e2;
+      padding: 24px 20px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .sidebar a {
+      display: block;
+      font-size: 14px;
+      color: #222;
+      text-decoration: none;
+      padding: 6px 0;
+      line-height: 1.4;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      flex: 1;
+      padding: 36px 40px;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 14px;
+      white-space: pre-line;
+    }
+
+    ul, ol {
+      line-height: 1.7;
+      margin-top: 0;
+      margin-bottom: 14px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    pre {
+      background: #f7f7f7;
+      border: 1px solid #e2e2e2;
+      border-radius: 6px;
+      padding: 14px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0 20px 0;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    th {
+      background: #f0f0f0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 28px 0;
+    }
+
+    .box {
+      background: #f7f7f7;
+      border-left: 4px solid #999;
+      padding: 14px;
+      margin: 20px 0;
+      border-radius: 6px;
+      white-space: pre-line;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 850px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="data-training-welcome.html">Data Training</a>
+</div>
+
+<div class="layout">
+<aside class="sidebar">
+  <h2>Data Training</h2>
+  
+
+    <a href="data-training-welcome.html">Welcome</a>
+    <a href="data-training-open-science.html">About Open Science</a>
+    <a href="data-training-good-data.html">What Good Data Looks Like</a>
+
+    <a href="data-training-data.html">The Data</a>
+    <a href="data-training-metadata.html">Metadata</a>
+    <a href="data-training-readme.html">README</a>
+    <a href="data-training-license.html" class="active">License</a>
+    <a href="data-training-repository.html">Repository</a>
+
+    <a href="data-training-curation.html" >Curation & Training</a>
+  </aside>
+
+  <main class="content">
+
+   
+
+    <h1 id="license">License</h1>
+
+    <p>A dataset cannot be reused if people do not know whether they are allowed to use it.
+A license is what tells others what they can do with your data. Without it, even well-prepared data may not be reused, simply because the conditions are unclear.</p>
+
+    <p><strong>Common licenses:</strong></p>
+
+    <ul>
+      <li>CC BY : others can use your data, but must give credit</li>
+      <li>CC BY-SA : same as above, but must share under the same license</li>
+      <li>CC BY-NC : reuse allowed for non-commercial purposes only</li>
+      <li>CC0 : no restriction, data are fully open</li>
+    </ul>
+
+    <p><strong>How to add your license?</strong>
+In your metadata or README, you need to add:
+<pre>
+      License: CC BY 4.0 </pre>
+This means your data can be reused, as long as you are cited.</p>

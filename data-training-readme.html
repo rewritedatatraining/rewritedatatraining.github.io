@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Training | The Data</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      font-size: 15px;
+    }
+
+    .topnav {
+      background: #111;
+      color: white;
+      padding: 12px 20px;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .topnav a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 270px;
+      background: #f4f4f4;
+      border-right: 1px solid #e2e2e2;
+      padding: 24px 20px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .sidebar a {
+      display: block;
+      font-size: 14px;
+      color: #222;
+      text-decoration: none;
+      padding: 6px 0;
+      line-height: 1.4;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      flex: 1;
+      padding: 36px 40px;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 14px;
+      white-space: pre-line;
+    }
+
+    ul, ol {
+      line-height: 1.7;
+      margin-top: 0;
+      margin-bottom: 14px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    pre {
+      background: #f7f7f7;
+      border: 1px solid #e2e2e2;
+      border-radius: 6px;
+      padding: 14px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0 20px 0;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    th {
+      background: #f0f0f0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 28px 0;
+    }
+
+    .box {
+      background: #f7f7f7;
+      border-left: 4px solid #999;
+      padding: 14px;
+      margin: 20px 0;
+      border-radius: 6px;
+      white-space: pre-line;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 850px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="data-training-welcome.html">Data Training</a>
+</div>
+
+<div class="layout">
+<aside class="sidebar">
+  <h2>Data Training</h2>
+
+  <a href="data-training-welcome.html">Welcome</a>
+  <a href="data-training-open-science.html">About Open Science</a>
+  <a href="data-training-good-data.html">What Good Data Looks Like</a>
+
+<a href="data-training-data.html" >The Data</a>
+  <a href="data-training-metadata.html">Metadata</a>
+  <a href="data-training-readme.html" class="active">README</a>
+  <a href="data-training-license.html">License</a>
+  <a href="data-training-repository.html">Repository</a>
+
+  <a href="data-training-curation.html">Curation & Training</a>
+</aside>
+
+
+  <main class="content">
+
+
+    <h1 id="readme">README</h1>
+
+    <p>A README is the simplest and most important document in your dataset.
+It is where you explain your data in plain language. While metadata is machine-readable, a README is human-readable.
+Think of it as the instruction manual for your data. Like a letter to other people, but it contains the story of your data.
+Without a README, even well-structured data can become difficult to understand.</p>
+
+    <p><strong>What a README does</strong>
+A README allows someone else to:</p>
+
+    <ul>
+      <li>understand what the dataset is</li>
+      <li>know how it was created</li>
+      <li>interpret the variables</li>
+      <li>use the data without asking you</li>
+    </ul>
+
+    <p>It is the bridge between your data and the person who will reuse them.</p>
+
+    <p><strong>What to include</strong>
+A README does not need to be long. It just needs to be clear.
+At minimum:</p>
+
+    <ul>
+      <li>what the dataset contains</li>
+      <li>how the data were collected (e.g. instrument, technique, method)</li>
+      <li>what each variable means</li>
+      <li>units and formats</li>
+      <li>any processing steps</li>
+      <li>who to contact (optional)</li>
+      <li>license</li>
+    </ul>
+
+    <p><strong>Example</strong>
+README.txt</p>
+
+    <pre>Title: Temperature dataset, Loire Estuary, April 2024
+
+Description:
+This dataset contains temperature measurements collected in the Loire Estuary between 2024-04-10 and 2024-04-15.
+
+Measurements were recorded every 10 minutes in degrees Celsius (°C).
+
+Location:
+Loire Estuary, France
+Coordinates: 47.25 N, -2.10 W
+
+Instrument:
+Temperature sensor (HOBO data logger)
+
+Method:
+The sensor was installed at 1 meter above ground level and recorded temperature automatically every 10 minutes.
+
+Calibration:
+The sensor was calibrated before deployment according to manufacturer specifications.
+
+Variables:
+time = timestamp (YYYY-MM-DD HH:MM)
+temperature_C = temperature in degrees Celsius
+
+Format:
+CSV files
+
+License:
+CC BY 4.0</pre>

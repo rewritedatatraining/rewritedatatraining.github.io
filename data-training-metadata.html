@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Training | The Data</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      font-size: 15px;
+    }
+
+    .topnav {
+      background: #111;
+      color: white;
+      padding: 12px 20px;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .topnav a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 270px;
+      background: #f4f4f4;
+      border-right: 1px solid #e2e2e2;
+      padding: 24px 20px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .sidebar a {
+      display: block;
+      font-size: 14px;
+      color: #222;
+      text-decoration: none;
+      padding: 6px 0;
+      line-height: 1.4;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      flex: 1;
+      padding: 36px 40px;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 14px;
+      white-space: pre-line;
+    }
+
+    ul, ol {
+      line-height: 1.7;
+      margin-top: 0;
+      margin-bottom: 14px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    pre {
+      background: #f7f7f7;
+      border: 1px solid #e2e2e2;
+      border-radius: 6px;
+      padding: 14px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0 20px 0;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    th {
+      background: #f0f0f0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 28px 0;
+    }
+
+    .box {
+      background: #f7f7f7;
+      border-left: 4px solid #999;
+      padding: 14px;
+      margin: 20px 0;
+      border-radius: 6px;
+      white-space: pre-line;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 850px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="data-training-welcome.html">Data Training</a>
+</div>
+
+<div class="layout">
+<aside class="sidebar">
+  <h2>Data Training</h2>
+
+  <a href="data-training-welcome.html">Welcome</a>
+  <a href="data-training-open-science.html">About Open Science</a>
+  <a href="data-training-good-data.html">What Good Data Looks Like</a>
+
+<a href="data-training-data.html" >The Data</a>
+  <a href="data-training-metadata.html" class="active">Metadata</a>
+  <a href="data-training-readme.html">README</a>
+  <a href="data-training-license.html">License</a>
+  <a href="data-training-repository.html">Repository</a>
+
+  <a href="data-training-curation.html">Curation & Training</a>
+</aside>
+
+
+  <main class="content">
+
+
+
+<h1 id="metadata">Metadata</h1>
+
+    <p>Metadata are simply the information that explains your data. They allow someone else to understand what you did, without asking you.
+A useful way to structure this is through Dublin Core (DCMI).
+You can create a .xml or .json file (editable with a text editor).
+Example:</p>
+
+    <pre>Title:
+Creator:
+Subject:
+Description:
+Publisher:
+Contributor:
+Date:
+Type:
+Format:
+Identifier:
+Source:
+Language:
+Relation:
+Coverage:
+Rights:</pre>
+
+     <p><strong>What does “embedded metadata” mean? </strong>
+Embedded metadata are written inside the file itself.
+This is possible for some formats:</p>
+
+    <ul>
+      <li>images (.tif, .jpg) = metadata stored in the file</li>
+      <li>geospatial data (.tif, .shp) = includes coordinate system, projection</li>
+      <li>PDFs = author, title, keywords</li>
+      <li>some scientific formats (.nc, .hdf5)</li>
+    </ul>
+
+    <p>In these cases, the information travels with the file.</p>
+
+    <p><strong>When metadata are separate</strong> </p>
+<p> For many datasets (especially .csv), metadata are not embedded.
+In that case, you provide them as: </p>
+
+    <ul>
+      <li>a README file</li>
+      <li>a metadata file (.json, .xml)</li>
+      <li>fields filled directly in the repository (e.g. Zenodo form)</li>
+    </ul>
+
+    <p><strong>Which one should you choose?</strong></p>
+
+    <ul>
+      <li>If your format supports it = embed metadata</li>
+      <li>If not = use README + metadata file</li>
+      <li>In any case, fill metadata form in the repository when you deposit your data</li>
+    </ul>
+
+    <div class="box">All you need to remember:
+Metadata do not have to be in one place, what matters is that they exist and are clear.</div>
